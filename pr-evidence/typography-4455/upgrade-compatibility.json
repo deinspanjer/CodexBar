@@ -1,0 +1,33 @@
+{
+  "baseline": "official v0.74.1 build167",
+  "candidateCommit": "7a21693d60f59f47a102290170809248210bda68",
+  "noPreferencesEditedBetweenVersionLaunches": true,
+  "changedLayoutKeys": [],
+  "preservedKeys": [
+    "menuBarLayout",
+    "menuBarLayoutConditionals",
+    "menuBarLayoutConditionalsV2",
+    "menuBarLayoutConditionalsV3",
+    "menuBarLayoutConditionalsV4",
+    "menuBarLayoutOverrides",
+    "menuBarLayoutOverridesV2",
+    "menuBarLayoutOverridesV3",
+    "menuBarLayoutOverridesV4",
+    "menuBarLayoutSize",
+    "menuBarLayoutV2",
+    "menuBarLayoutV3",
+    "menuBarLayoutV4"
+  ],
+  "sizeAfterUpgrade": "regular",
+  "newDigitPreferenceAbsentAfterUpgrade": true,
+  "note": "Real existing profile with temporary Codex-only two-line override. Exact typed layout preference values were compared after decoding JSON data; unrelated identities and credentials are omitted.",
+  "gapPreference": {
+    "before": "absent (Regular default)",
+    "after": "absent (Regular default)"
+  },
+  "verticalAdjustmentPreference": {
+    "before": "absent (0 default)",
+    "after": "absent (0 default)"
+  },
+  "visualUpgradeCapture": "Pending: display disconnected and console locked before candidate capture."
+}

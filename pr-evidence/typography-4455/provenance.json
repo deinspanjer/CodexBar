@@ -1,0 +1,13 @@
+{
+  "pullRequest": "https://github.com/steipete/CodexBar/pull/4455",
+  "candidateCommit": "7a21693d60f59f47a102290170809248210bda68",
+  "baseline": {
+    "tag": "v0.74.1",
+    "version": "0.74.1",
+    "build": "167",
+    "zipSHA256": "73d87a6d7091670015c6f47f5fbc9304d8b3e9baf4728799287299bbbf0edec5",
+    "signatureVerification": "codesign --verify --deep --strict passed outside sandbox"
+  },
+  "captures": [],
+  "candidateBundleExecutableSHA256": "b35426d44718df91cb3889757bf4659ee3f24617b716658fddfe485f7866ccc9"
+}

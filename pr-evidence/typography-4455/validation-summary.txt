@@ -1,0 +1,26 @@
+PR #4455, independent head 7a21693d60f59f47a102290170809248210bda68
+
+Final full suite
+Swift test timing summary:
+- Shard: none
+- Execution mode: direct
+- Workers: 4
+- Group size: 12
+- Discovered selections: 1654
+- Selected selections: 1654
+- Selected groups: 150
+- First-pass successful groups: 150
+- First-pass failed groups: 0
+- Full-group retries: 0
+- Recovered groups: 0
+- Timed out groups: 0
+- Isolated selection retries: 0
+- Discovery seconds: 4.4
+- Execution seconds: 350.0
+- Total seconds: 357.8
+
+Focused renderer suite
+✔ Test run with 208 tests in 9 suites passed after 1.273 seconds.
+
+Repository checks
+Done linting! Found 0 violations, 0 serious in 2945 files.
