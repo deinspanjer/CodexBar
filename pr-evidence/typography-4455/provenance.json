@@ -8,6 +8,172 @@
     "zipSHA256": "73d87a6d7091670015c6f47f5fbc9304d8b3e9baf4728799287299bbbf0edec5",
     "signatureVerification": "codesign --verify --deep --strict passed outside sandbox"
   },
-  "captures": [],
-  "candidateBundleExecutableSHA256": "b35426d44718df91cb3889757bf4659ee3f24617b716658fddfe485f7866ccc9"
+  "captures": [
+    {
+      "pid": 82294,
+      "size": "Small",
+      "monospacedDigits": false,
+      "scope": "Codex",
+      "preview": [
+        "\ufffc\u200922%\nin 6d 7h"
+      ],
+      "live": [
+        "Codex icon, Usage 22%, Line 2, Resets in 6d 7h"
+      ],
+      "window": {
+        "position": [
+          -1220,
+          -601
+        ],
+        "size": [
+          1210,
+          1165
+        ]
+      },
+      "image": "head-small-off.png",
+      "imageSHA256": "f6a3faf398cef6536f8b9dd3f368937054bb424ea415bd5f43246497cea68f6f"
+    },
+    {
+      "pid": 82294,
+      "size": "Small",
+      "monospacedDigits": true,
+      "scope": "Codex",
+      "preview": [
+        "\ufffc\u200922%\nin 6d 7h"
+      ],
+      "live": [
+        "Codex icon, Usage 22%, Line 2, Resets in 6d 7h"
+      ],
+      "window": {
+        "position": [
+          -1220,
+          -601
+        ],
+        "size": [
+          1210,
+          1165
+        ]
+      },
+      "image": "head-small-on.png",
+      "imageSHA256": "63bf8c4882351bf7de10ccb29454351d0c7361cf9dd39525502c75a61f63cf96"
+    },
+    {
+      "pid": 82294,
+      "size": "Regular",
+      "monospacedDigits": false,
+      "scope": "Codex",
+      "preview": [
+        "\ufffc\u200922%\nin 6d 7h"
+      ],
+      "live": [
+        "Codex icon, Usage 22%, Line 2, Resets in 6d 7h"
+      ],
+      "window": {
+        "position": [
+          -1220,
+          -601
+        ],
+        "size": [
+          1210,
+          1165
+        ]
+      },
+      "image": "head-regular-off.png",
+      "imageSHA256": "31f00c2cbf2d0fc8c82b64294144e837bcd189551296c36b8eaf5f7a7c35a3a8"
+    },
+    {
+      "pid": 82294,
+      "size": "Regular",
+      "monospacedDigits": true,
+      "scope": "Codex",
+      "preview": [
+        "\ufffc\u200922%\nin 6d 7h"
+      ],
+      "live": [
+        "Codex icon, Usage 22%, Line 2, Resets in 6d 7h"
+      ],
+      "window": {
+        "position": [
+          -1220,
+          -601
+        ],
+        "size": [
+          1210,
+          1165
+        ]
+      },
+      "image": "head-regular-on.png",
+      "imageSHA256": "44b5922a56a8523169815d3cfae491d5f20348bdae32e332cd6ae707083cd306"
+    },
+    {
+      "pid": 82294,
+      "size": "Large",
+      "monospacedDigits": false,
+      "scope": "Codex",
+      "preview": [
+        "\ufffc\u200922%\nin 6d 7h"
+      ],
+      "live": [
+        "Codex icon, Usage 22%, Line 2, Resets in 6d 7h"
+      ],
+      "window": {
+        "position": [
+          -1220,
+          -601
+        ],
+        "size": [
+          1210,
+          1165
+        ]
+      },
+      "image": "head-large-off.png",
+      "imageSHA256": "581f7167f8c05d799f4317841767b49fffc70abaade73f0317898c6d1a4618b9"
+    },
+    {
+      "pid": 82294,
+      "size": "Large",
+      "monospacedDigits": true,
+      "scope": "Codex",
+      "preview": [
+        "\ufffc\u200922%\nin 6d 7h"
+      ],
+      "live": [
+        "Codex icon, Usage 22%, Line 2, Resets in 6d 7h"
+      ],
+      "window": {
+        "position": [
+          -1220,
+          -601
+        ],
+        "size": [
+          1210,
+          1165
+        ]
+      },
+      "image": "head-large-on.png",
+      "imageSHA256": "372fd28919f0c39834a4c97a55f1d74604c65672a3f9965a08377bd5d77dc3cc"
+    },
+    {
+      "image": "baseline-small.png",
+      "imageSHA256": "4b3d89cbe86d6a951773dc6b7c4fc58938625afb8b0bc48559d1e673361b3944"
+    },
+    {
+      "image": "baseline-regular.png",
+      "imageSHA256": "9721949c0aad610638773c47e7ed099e9843da311f6535437ba14af277317fc5"
+    },
+    {
+      "image": "head-restart-large-on.png",
+      "imageSHA256": "326d230da67957069525bed2503fd1df51f3bacd129da1be11da94723249fc71"
+    }
+  ],
+  "candidateBundleExecutableSHA256": "b35426d44718df91cb3889757bf4659ee3f24617b716658fddfe485f7866ccc9",
+  "captureMethod": "macOS screencapture: actual app window plus contemporaneous live menu-bar strip, joined without scaling. Overview uses labeled native-pixel crops. No blurred regions or redrawn usage text.",
+  "display": {
+    "index": 3,
+    "pixelWidth": 5120,
+    "pixelHeight": 1440,
+    "scale": 1
+  },
+  "usageValues": "Live account values, intentionally unredacted; may change between captures.",
+  "captureDate": "2026-10-12"
 }

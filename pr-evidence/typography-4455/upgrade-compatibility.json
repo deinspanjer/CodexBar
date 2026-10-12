@@ -29,5 +29,10 @@
     "before": "absent (0 default)",
     "after": "absent (0 default)"
   },
-  "visualUpgradeCapture": "Pending: display disconnected and console locked before candidate capture."
+  "visualUpgradeCapture": "Completed: baseline-small.png, baseline-regular.png and the independent PR six-state matrix show the same saved two-line Codex layout.",
+  "initialCandidateUI": {
+    "size": "Regular",
+    "monospacedDigits": false,
+    "newDigitKeyAbsent": true
+  }
 }

@@ -1,0 +1,30 @@
+{
+  "candidateCommit": "7a21693d60f59f47a102290170809248210bda68",
+  "beforePID": 82294,
+  "afterPID": 90506,
+  "noPreferencesWrittenBetweenShutdownAndRelaunch": true,
+  "allLayoutPreferencesPreserved": true,
+  "keysCompared": 14,
+  "UIReadback": {
+    "pid": 90506,
+    "size": "Large",
+    "monospacedDigits": true,
+    "scope": "Codex",
+    "preview": [
+      "\ufffc\u200922%\nin 6d 7h"
+    ],
+    "live": [
+      "Codex icon, Usage 22%, Line 2, Resets in 6d 7h"
+    ],
+    "window": {
+      "position": [
+        -1220,
+        -601
+      ],
+      "size": [
+        1210,
+        1165
+      ]
+    }
+  }
+}
