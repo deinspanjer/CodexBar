@@ -125,6 +125,7 @@ struct MenuBarLayoutRenderExtra: Hashable {
 
 struct MenuBarLayoutRenderOptions: Hashable {
     let size: MenuBarLayoutSize
+    let monospacedDigits: Bool
     let colorPace: Bool
     let colorByProvider: Bool
     let highContrast: Bool
@@ -161,9 +162,11 @@ struct MenuBarLayoutRenderOptions: Hashable {
         verticalAdjustment: Int = 0,
         colorPace: Bool = false,
         colorByProvider: Bool = false,
-        forceStackedStyle: Bool = false)
+        forceStackedStyle: Bool = false,
+        monospacedDigits: Bool = false)
     {
         self.size = size
+        self.monospacedDigits = monospacedDigits
         self.colorPace = colorPace
         self.colorByProvider = colorByProvider
         self.highContrast = highContrast
@@ -183,6 +186,7 @@ struct MenuBarLayoutRenderKey: Hashable {
     let layout: MenuBarLayout
     let data: MenuBarLayoutRenderData
     let size: MenuBarLayoutSize
+    let monospacedDigits: Bool
     let colorPace: Bool
     let colorByProvider: Bool
     let highContrast: Bool
@@ -322,6 +326,7 @@ final class MenuBarLayoutRenderer {
             layout: layout,
             data: data,
             size: options.size,
+            monospacedDigits: options.monospacedDigits,
             colorPace: options.colorPace,
             colorByProvider: options.colorByProvider,
             highContrast: options.highContrast,
@@ -430,7 +435,10 @@ final class MenuBarLayoutRenderer {
         Self.removeDuplicateBalanceResets(from: &renderedLines, data: data)
 
         let isStacked = options.forceStackedStyle || renderedLines.count == 2
-        let font = NSFont.systemFont(ofSize: Self.fontSize(size: options.size, isStacked: isStacked))
+        let fontSize = Self.fontSize(size: options.size, isStacked: isStacked)
+        let font = options.monospacedDigits
+            ? NSFont.monospacedDigitSystemFont(ofSize: fontSize, weight: .regular)
+            : NSFont.systemFont(ofSize: fontSize)
         let providerTintColor = Self.effectiveProviderTintColor(for: data.provider, options: options)
         let foregroundColor = if let providerTintColor {
             providerTintColor
@@ -444,8 +452,9 @@ final class MenuBarLayoutRenderer {
         let isTintActive = providerTintColor != nil
         let paragraphStyle = NSMutableParagraphStyle()
         if isStacked {
-            paragraphStyle.minimumLineHeight = 9.5
-            paragraphStyle.maximumLineHeight = 9.5
+            let lineHeight: CGFloat = options.size == .large ? 11 : 9.5
+            paragraphStyle.minimumLineHeight = lineHeight
+            paragraphStyle.maximumLineHeight = lineHeight
             paragraphStyle.lineSpacing = -1
         }
         var attributes: [NSAttributedString.Key: Any] = [
@@ -1113,14 +1122,26 @@ final class MenuBarLayoutRenderer {
 
     private static func fontSize(size: MenuBarLayoutSize, isStacked: Bool) -> CGFloat {
         if isStacked {
-            return size == .small ? 8 : 9
+            return switch size {
+            case .small: 8
+            case .regular: 9
+            case .large: 10
+            }
         }
-        return size == .small ? 11 : NSFont.systemFontSize
+        return switch size {
+        case .small: 11
+        case .regular: NSFont.systemFontSize
+        case .large: 14
+        }
     }
 
     private static func iconHeight(size: MenuBarLayoutSize, isStacked: Bool) -> CGFloat {
         if isStacked {
-            return size == .small ? 8 : 9
+            return switch size {
+            case .small: 8
+            case .regular: 9
+            case .large: 10
+            }
         }
         return size == .small ? 14 : 18
     }
