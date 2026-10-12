@@ -482,6 +482,13 @@ final class MenuBarLayoutRenderer {
             nil
         }
 
+        if isStacked, options.size == .large, leadingIcon == nil, icon != nil,
+           renderedLines.joined().contains(.icon)
+        {
+            // Inline attachments need less baseline lowering to fit both rows in the 22pt status bar.
+            attributes[.baselineOffset] = Self.stackedBaselineOffset + 2 + CGFloat(options.verticalAdjustment)
+        }
+
         for (lineIndex, renderedLine) in renderedLines.enumerated() {
             if lineIndex > 0 {
                 result.append(NSAttributedString(string: "\n", attributes: attributes))
@@ -1140,7 +1147,7 @@ final class MenuBarLayoutRenderer {
             return switch size {
             case .small: 8
             case .regular: 9
-            case .large: 10
+            case .large: 9
             }
         }
         return size == .small ? 14 : 18
