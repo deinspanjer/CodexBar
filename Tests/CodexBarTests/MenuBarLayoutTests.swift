@@ -1,4 +1,5 @@
 import Foundation
+import Observation
 import Testing
 @testable import CodexBar
 @testable import CodexBarCore
@@ -26,6 +27,8 @@ struct MenuBarLayoutTests {
                 .pace(window: .weekly),
                 .pace(window: .automatic),
                 .usageBar,
+                .progressBar(window: .session), .progressBar(window: .weekly),
+                .progressBar(window: .scopedWeekly), .progressBar(window: .automatic),
             ],
             [
                 .resetCountdown,
@@ -34,7 +37,7 @@ struct MenuBarLayoutTests {
                 .runsOutCompact,
                 .balance,
                 .costToday,
-                .cost30d,
+                .costWindow,
                 .separatorDot,
                 .space,
             ],
@@ -54,6 +57,20 @@ struct MenuBarLayoutTests {
         #expect(String(bytes: labeled, encoding: .utf8) == #"{"runsOut":{}}"#)
         #expect(String(bytes: compact, encoding: .utf8) == #"{"runsOutCompact":{}}"#)
         #expect(try JSONDecoder().decode(MenuBarLayoutToken.self, from: labeled) == .runsOut)
+    }
+
+    @Test
+    func `cost window token keeps its persisted discriminator`() throws {
+        let encoded = try JSONEncoder().encode(MenuBarLayoutToken.costWindow)
+
+        #expect(String(bytes: encoded, encoding: .utf8) == #"{"cost30d":{}}"#)
+        #expect(try JSONDecoder().decode(MenuBarLayoutToken.self, from: encoded) == .costWindow)
+        #expect(try JSONDecoder().decode(MenuBarLayoutToken.self, from: Data(#"{"cost30d":{}}"#.utf8)) == .costWindow)
+        #expect(MenuBarConditionalMetric.costWindow.rawValue == "cost30d")
+        #expect(MenuBarConditionalMetric(rawValue: "cost30d") == .costWindow)
+        let metric = try JSONEncoder().encode(MenuBarConditionalMetric.costWindow)
+        #expect(String(bytes: metric, encoding: .utf8) == #""cost30d""#)
+        #expect(try JSONDecoder().decode(MenuBarConditionalMetric.self, from: metric) == .costWindow)
     }
 
     @Test
@@ -1150,6 +1167,20 @@ struct MenuBarLayoutTests {
 
         #expect(providerSettings.menuBarLayoutGap == .tight)
         #expect(providerSettings.menuBarLayoutOverrides[.kimi] == providerLayout)
+    }
+
+    @Test
+    @MainActor
+    func `digit spacing changes refresh menu observation`() async {
+        let settings = testSettingsStore(suiteName: "layout-digit-observation", userDefaults: InMemoryUserDefaults())
+        await confirmation { changed in
+            withObservationTracking {
+                _ = settings.menuObservationToken
+            } onChange: {
+                changed()
+            }
+            settings.menuBarLayoutMonospacedDigits = true
+        }
     }
 
     @Test(arguments: MenuBarLayoutSize.allCases)
