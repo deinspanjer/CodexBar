@@ -1,9 +1,23 @@
 import Foundation
+import Observation
 import Testing
 @testable import CodexBar
 
 @MainActor
 struct MenuBarLayoutV5PersistenceTests {
+    @Test
+    func `digit spacing changes refresh menu observation`() async {
+        let settings = testSettingsStore(suiteName: "layout-digit-observation", userDefaults: InMemoryUserDefaults())
+        await confirmation { changed in
+            withObservationTracking {
+                _ = settings.menuObservationToken
+            } onChange: {
+                changed()
+            }
+            settings.menuBarLayoutMonospacedDigits = true
+        }
+    }
+
     @Test
     func `typography preferences preserve the V5 layout and V4 projection`() throws {
         let defaults = InMemoryUserDefaults()

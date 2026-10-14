@@ -1,5 +1,4 @@
 import Foundation
-import Observation
 import Testing
 @testable import CodexBar
 @testable import CodexBarCore
@@ -1167,20 +1166,6 @@ struct MenuBarLayoutTests {
 
         #expect(providerSettings.menuBarLayoutGap == .tight)
         #expect(providerSettings.menuBarLayoutOverrides[.kimi] == providerLayout)
-    }
-
-    @Test
-    @MainActor
-    func `digit spacing changes refresh menu observation`() async {
-        let settings = testSettingsStore(suiteName: "layout-digit-observation", userDefaults: InMemoryUserDefaults())
-        await confirmation { changed in
-            withObservationTracking {
-                _ = settings.menuObservationToken
-            } onChange: {
-                changed()
-            }
-            settings.menuBarLayoutMonospacedDigits = true
-        }
     }
 
     @Test(arguments: MenuBarLayoutSize.allCases)

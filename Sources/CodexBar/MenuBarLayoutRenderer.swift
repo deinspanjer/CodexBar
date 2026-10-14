@@ -1186,7 +1186,9 @@ final class MenuBarLayoutRenderer {
         guard minutes.isMultiple(of: 60) else { return "\(minutes)m" }
         return "\(minutes / 60)h"
     }
+}
 
+extension MenuBarLayoutRenderer {
     private static func fontSize(size: MenuBarLayoutSize, isStacked: Bool) -> CGFloat {
         if isStacked {
             return switch size {
@@ -1208,9 +1210,7 @@ final class MenuBarLayoutRenderer {
         }
         return size == .small ? 14 : 18
     }
-}
 
-extension MenuBarLayoutRenderer {
     /// Tokens-per-minute text and graph, kept out of the class body's main switch.
     private static func renderThroughputItem(
         _ item: MenuBarLayoutToken,
