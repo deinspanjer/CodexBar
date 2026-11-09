@@ -1,0 +1,43 @@
+Supplemental high-contrast spanning-icon evidence
+
+These 32 PNGs are synthetic renderer outputs, not screenshots of a shipped app.
+They exercise the actual renderer with identical synthetic fixture inputs at
+base 7447bc77c2497323d9c41e40164ce705533493c8 and the candidate revision named
+in supplemental-provenance.json. All captures are original transparent PNGs,
+with no crop, resizing, redaction, or post-export redrawing.
+
+Representative comparison:
+Before: supplemental/base-regular-NSAppearanceNameDarkAqua-offset0-2x.png
+After: supplemental/fix-regular-NSAppearanceNameDarkAqua-offset0-2x.png
+
+The synthetic icon is a solid red 16x16pt square. Its full expected extent at 2x
+is 32x32pixels. The candidate shows it spanning both text rows; base shrinks it
+to the first-row attachment. Geometry cases cover Small/Regular/Large, Aqua and
+DarkAqua, positive/negative/zero vertical adjustments, and 1x/2x drawing. The
+manifest records exact dimensions, SHA256 hashes, export method, and limits.
+
+Required native proof remains missing:
+- Actual preference, layout preview, and live menu item together.
+- Shipped high-contrast on/off in light/dark appearance.
+- Actual active/inactive displays.
+- Actual quota-warning icon with nonzero vertical adjustment.
+
+Offscreen highlighted/unhighlighted cell exports are byte-identical within
+each revision and appearance. They do not establish native menu-highlight or
+inactive-display behavior. The temporary exporter source was removed without
+retaining its exact text; production tests retain geometry/pixel fixtures.
+
+Packaged executable/process provenance, when present, verifies the exact debug
+bundle and existing safe one-line synthetic proof entry point only. It does
+not close any of these native scenario gaps. No live provider probes, Keychain
+operations, or desktop-control workaround were used. The original installed
+app and its settings were not replaced or modified.
+
+Keep the PR draft until native evidence is complete or the maintainer accepts
+the explicitly documented gaps.
+
+Final debug package: commit e5f6139cb3d029b8a517c97a8c14c3b1fbb981c4
+Executable SHA256: cd8b00d44bc992a2653208fd9aecadd4254ffdfbb84bcc8a30e726362f50a70d
+Package and codesign integrity checks passed. Exact owned synthetic process
+path matched the packaged executable; alive after 3 seconds; terminated/reaped
+only that process afterward. See package-provenance.json.

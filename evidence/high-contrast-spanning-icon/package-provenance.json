@@ -1,0 +1,26 @@
+{
+  "kind": "existing synthetic one-line proof process; not shipped-app scenario evidence",
+  "candidateCommit": "e5f6139cb3d029b8a517c97a8c14c3b1fbb981c4",
+  "bundle": "CodexBar.app",
+  "executable": "Contents/MacOS/CodexBar",
+  "executableSHA256": "cd8b00d44bc992a2653208fd9aecadd4254ffdfbb84bcc8a30e726362f50a70d",
+  "CodexGitCommit": "e5f6139cb",
+  "CodexBuildTimestamp": "2026-11-09T16:28:13Z",
+  "CFBundleIdentifier": "com.steipete.codexbar.debug",
+  "buildCommand": "DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer PATH=/opt/homebrew/opt/python@3.14/libexec/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin CODEXBAR_SIGNING=adhoc ./Scripts/package_app.sh debug",
+  "buildResult": "exit0; debug/ad-hoc packaging and code-signature integrity checks passed",
+  "buildRecovery": "Initial widget dependency checkout failed: four local Xcode source repositories lacked pinned commit trees. Recovered the exact pinned source objects via local git fetch from valid SwiftPM checkouts in the same worktree, then reran the unchanged project packaging command successfully. No compiled products were copied between worktrees.",
+  "toolchain": "Xcode27.2 build27B52 / Swift6.4.2",
+  "syntheticProcessVerification": {
+    "ownedPID": 76159,
+    "aliveAfterSeconds": 3,
+    "aliveAtVerification": true,
+    "pathMatches": true,
+    "exitCodeAfterCleanup": -15,
+    "ownedProcessReaped": true
+  },
+  "argument": "--menu-layout-proof",
+  "processOutput": "layout-proof mode=Baseline width=108.0 titleLength=14 template=false adjustment=0",
+  "limits": "This existing one-line synthetic entry point verifies packaged executable identity and liveness only. It does not exercise actual preferences, preview, target two-row layout, active/inactive displays, or quota-warning native scenarios. Original installed app/settings untouched.",
+  "trackedTreeAfterPackaging": "clean"
+}

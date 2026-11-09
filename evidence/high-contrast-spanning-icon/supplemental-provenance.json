@@ -1,0 +1,211 @@
+{
+  "kind": "supplemental synthetic renderer output; not shipped-app native evidence",
+  "baseCommit": "7447bc77c2497323d9c41e40164ce705533493c8",
+  "candidateCommit": "e5f6139cb3d029b8a517c97a8c14c3b1fbb981c4",
+  "candidateRendererSHA256": "a0805520acb2a4ccc8e1d0f50665302b66ee90f73b2430e7ee96ad1e790b8b32",
+  "toolchain": "Xcode27.2 / Swift6.4.2; DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer",
+  "captureMethod": "Temporary opt-in pixel export in actual renderer regression tests. Original transparent PNGs, no crop, redaction, resizing, or redrawing. Synthetic solid red icon and synthetic usage data.",
+  "limits": [
+    "No actual preference/editor/live status screenshot",
+    "No actual active/inactive display verification",
+    "Offscreen cell highlight pairs byte-identical in base and candidate; actual native highlighted menu not established"
+  ],
+  "captures": [
+    {
+      "file": "supplemental/base-cell-NSAppearanceNameAqua-highlightfalse-2x.png",
+      "pixelWidth": 110,
+      "pixelHeight": 44,
+      "sha256": "a1c9ce94053e76122fdead13ec7504f9febe3284fbc7b751322f1e60525ad08a"
+    },
+    {
+      "file": "supplemental/base-cell-NSAppearanceNameAqua-highlighttrue-2x.png",
+      "pixelWidth": 110,
+      "pixelHeight": 44,
+      "sha256": "a1c9ce94053e76122fdead13ec7504f9febe3284fbc7b751322f1e60525ad08a"
+    },
+    {
+      "file": "supplemental/base-cell-NSAppearanceNameDarkAqua-highlightfalse-2x.png",
+      "pixelWidth": 110,
+      "pixelHeight": 44,
+      "sha256": "f7ee4b47077de43939e32d910d6d60ab650a200764204b6890fd2b5ad064060c"
+    },
+    {
+      "file": "supplemental/base-cell-NSAppearanceNameDarkAqua-highlighttrue-2x.png",
+      "pixelWidth": 110,
+      "pixelHeight": 44,
+      "sha256": "f7ee4b47077de43939e32d910d6d60ab650a200764204b6890fd2b5ad064060c"
+    },
+    {
+      "file": "supplemental/base-large-NSAppearanceNameAqua-offset2-1x.png",
+      "pixelWidth": 49,
+      "pixelHeight": 22,
+      "sha256": "dd96ee6e6c53281160d3d3430b8fca61d7eca74f182cd7bbd4307bb4148940ff"
+    },
+    {
+      "file": "supplemental/base-large-NSAppearanceNameAqua-offset2-2x.png",
+      "pixelWidth": 98,
+      "pixelHeight": 44,
+      "sha256": "7f2e56fb7f304c81c6b72ddb2eec587448eb18d85b237db374f4c5b32d0a7df0"
+    },
+    {
+      "file": "supplemental/base-large-NSAppearanceNameDarkAqua-offset0-1x.png",
+      "pixelWidth": 49,
+      "pixelHeight": 22,
+      "sha256": "d090eab49f87bc1c6ef3177de69c12cef4725791110e492c4b1eaf75aaba2a69"
+    },
+    {
+      "file": "supplemental/base-large-NSAppearanceNameDarkAqua-offset0-2x.png",
+      "pixelWidth": 98,
+      "pixelHeight": 44,
+      "sha256": "d70e609b04a2138873e3db6d2abed78977e61979b35489d5b1579f5cce98e528"
+    },
+    {
+      "file": "supplemental/base-regular-NSAppearanceNameAqua-offset-2-1x.png",
+      "pixelWidth": 45,
+      "pixelHeight": 22,
+      "sha256": "ab37a363c92f0b812ee8a9d496f2eba5ecf44a586d73ac4bf158a0e01d571b55"
+    },
+    {
+      "file": "supplemental/base-regular-NSAppearanceNameAqua-offset-2-2x.png",
+      "pixelWidth": 90,
+      "pixelHeight": 44,
+      "sha256": "0f41b7f27393da8e4b965b9cb4d01c4adbed78cb84f49061d8cc1d3f18acfe87"
+    },
+    {
+      "file": "supplemental/base-regular-NSAppearanceNameDarkAqua-offset0-1x.png",
+      "pixelWidth": 45,
+      "pixelHeight": 22,
+      "sha256": "8b254c5ee4bea64ef4a712580cabc6521a54afefe598ae7df7b386699763744d"
+    },
+    {
+      "file": "supplemental/base-regular-NSAppearanceNameDarkAqua-offset0-2x.png",
+      "pixelWidth": 90,
+      "pixelHeight": 44,
+      "sha256": "197d55f8e16db582fe9a0754fd81abc24c4b610e6884183c49092020735f1a03"
+    },
+    {
+      "file": "supplemental/base-small-NSAppearanceNameAqua-offset-2-1x.png",
+      "pixelWidth": 41,
+      "pixelHeight": 22,
+      "sha256": "3e7437c21bf42a8465552563f22204e2bba0d18a19cf89a5b35eb472af38cebd"
+    },
+    {
+      "file": "supplemental/base-small-NSAppearanceNameAqua-offset-2-2x.png",
+      "pixelWidth": 82,
+      "pixelHeight": 44,
+      "sha256": "02062e2607187dcb99b30d30b48b66b2d24e6fbc4b3dc7171adbea30d7aa90d7"
+    },
+    {
+      "file": "supplemental/base-small-NSAppearanceNameDarkAqua-offset2-1x.png",
+      "pixelWidth": 41,
+      "pixelHeight": 22,
+      "sha256": "6590e107ff7230e6ae61ada529e9252d367a9e2c460e3668dc6dacbbf47d3472"
+    },
+    {
+      "file": "supplemental/base-small-NSAppearanceNameDarkAqua-offset2-2x.png",
+      "pixelWidth": 82,
+      "pixelHeight": 44,
+      "sha256": "23015a2ad3be676eb450237c46a2b13bc8336920d98371577b56922283854c3c"
+    },
+    {
+      "file": "supplemental/fix-cell-NSAppearanceNameAqua-highlightfalse-2x.png",
+      "pixelWidth": 126,
+      "pixelHeight": 44,
+      "sha256": "7ade3aeb4078a31019e9beda63617ac5626f8049ab7f921237a4e95aa83493eb"
+    },
+    {
+      "file": "supplemental/fix-cell-NSAppearanceNameAqua-highlighttrue-2x.png",
+      "pixelWidth": 126,
+      "pixelHeight": 44,
+      "sha256": "7ade3aeb4078a31019e9beda63617ac5626f8049ab7f921237a4e95aa83493eb"
+    },
+    {
+      "file": "supplemental/fix-cell-NSAppearanceNameDarkAqua-highlightfalse-2x.png",
+      "pixelWidth": 126,
+      "pixelHeight": 44,
+      "sha256": "665b79b69769c5f689fffb5e8ddbccce18e9c3aa3afaac52090b084be825f904"
+    },
+    {
+      "file": "supplemental/fix-cell-NSAppearanceNameDarkAqua-highlighttrue-2x.png",
+      "pixelWidth": 126,
+      "pixelHeight": 44,
+      "sha256": "665b79b69769c5f689fffb5e8ddbccce18e9c3aa3afaac52090b084be825f904"
+    },
+    {
+      "file": "supplemental/fix-large-NSAppearanceNameAqua-offset2-1x.png",
+      "pixelWidth": 56,
+      "pixelHeight": 22,
+      "sha256": "3e63cb2cf5b7fcf729241a6c749922787ebec353f929e6bf1bc0646ae3a737f4"
+    },
+    {
+      "file": "supplemental/fix-large-NSAppearanceNameAqua-offset2-2x.png",
+      "pixelWidth": 112,
+      "pixelHeight": 44,
+      "sha256": "e920dd2e394eb7cf47e0548353f11e96202eb3a9da160d858b1d04d0ddc3656b"
+    },
+    {
+      "file": "supplemental/fix-large-NSAppearanceNameDarkAqua-offset0-1x.png",
+      "pixelWidth": 56,
+      "pixelHeight": 22,
+      "sha256": "2ab5af60fa82931d03d1a2a1fd8ae547ec0d7566f6d8edaf04c867f1eff1b269"
+    },
+    {
+      "file": "supplemental/fix-large-NSAppearanceNameDarkAqua-offset0-2x.png",
+      "pixelWidth": 112,
+      "pixelHeight": 44,
+      "sha256": "aacf438930c92bf484f7194246248095105cbb7cb3a88afce63503bca559f784"
+    },
+    {
+      "file": "supplemental/fix-regular-NSAppearanceNameAqua-offset-2-1x.png",
+      "pixelWidth": 53,
+      "pixelHeight": 22,
+      "sha256": "04fb68e4a7a726ced9e1e837cf7dab89950bee883020ca2a5ab4915ff211aff5"
+    },
+    {
+      "file": "supplemental/fix-regular-NSAppearanceNameAqua-offset-2-2x.png",
+      "pixelWidth": 106,
+      "pixelHeight": 44,
+      "sha256": "42cb52a0fc07d875f689b9779ed6054da4345dcbe74ca6411951193fefc283d7"
+    },
+    {
+      "file": "supplemental/fix-regular-NSAppearanceNameDarkAqua-offset0-1x.png",
+      "pixelWidth": 53,
+      "pixelHeight": 22,
+      "sha256": "85bc57ddc0f08f4cfeaf8b72870f69bbd754df0ffbcc055f1bbe59144dc06492"
+    },
+    {
+      "file": "supplemental/fix-regular-NSAppearanceNameDarkAqua-offset0-2x.png",
+      "pixelWidth": 106,
+      "pixelHeight": 44,
+      "sha256": "749f030c84a10ad208a2a16fc4fd9c882fa053906c36cdc9cce2baad12fad959"
+    },
+    {
+      "file": "supplemental/fix-small-NSAppearanceNameAqua-offset-2-1x.png",
+      "pixelWidth": 49,
+      "pixelHeight": 22,
+      "sha256": "c14d9d48ea3ffb47ed73b47eb65697c86863e1914ec4b67964975014700aef8e"
+    },
+    {
+      "file": "supplemental/fix-small-NSAppearanceNameAqua-offset-2-2x.png",
+      "pixelWidth": 98,
+      "pixelHeight": 44,
+      "sha256": "4c852426eadb34b3a22de6e996740d54727a598cb10d59871e5d3563437b7e85"
+    },
+    {
+      "file": "supplemental/fix-small-NSAppearanceNameDarkAqua-offset2-1x.png",
+      "pixelWidth": 49,
+      "pixelHeight": 22,
+      "sha256": "52e972ed0fec6eba8a6e8d8238b3d058b3db4c4e77d02e338c8ac92ab074c4b4"
+    },
+    {
+      "file": "supplemental/fix-small-NSAppearanceNameDarkAqua-offset2-2x.png",
+      "pixelWidth": 98,
+      "pixelHeight": 44,
+      "sha256": "b0ecd9052fbc3fefecd226800a71b168960852069310828ba3a20d6790dfcbf7"
+    }
+  ],
+  "sourceIcon": "Synthetic16x16pt solid red icon; full extent32x32pixels at2x",
+  "reproducibility": "Production tests preserve geometry fixtures and pixel assertions. The temporary opt-in PNG export blocks were removed after capture without retaining exact source; captures are original files, not reconstructed.",
+  "geometryExport": "Returned attributed title drawn at (0,(22-titleHeight)/2) into transparent NSImage width ceil(titleWidth), height22pt. statusBitmap draws at native bounds into premultipliedLast RGBA CGContext scaled1x/2x, then NSBitmapImageRep(cgImage) PNGrepresentation. No post-export transformation.",
+  "cellExport": "Borderless NSButton frame statusItemWidth(.regular)x22, explicit Aqua/DarkAqua appearance, production applyMenuBarLayoutContent, cell.isHighlighted false/true, drawInterior(withFrame:button.bounds,in:button) inside explicit appearance; same bitmap helper at2x."
+}
